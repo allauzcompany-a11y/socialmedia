@@ -1,1 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Sora:wght@600;700;800&display=swap");
 @import "tailwindcss";
+
+:root {
+  --bg-start: #07080b;
+  --bg-end: #0b1018;
+  --text-primary: #f4f6f8;
+  --text-secondary: #b8c0cc;
+  --brand-primary: #ef4444;
+  --brand-accent: #60a5fa;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", "Segoe UI", "Tahoma", sans-serif;
+  color: var(--text-primary);
+  background:
+    radial-gradient(circle at 12% 8%, rgba(239, 68, 68, 0.22), transparent 38%),
+    radial-gradient(circle at 84% 20%, rgba(96, 165, 250, 0.16), transparent 34%),
+    linear-gradient(180deg, var(--bg-start), var(--bg-end));
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: "Sora", "Manrope", "Segoe UI", sans-serif;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.86);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
