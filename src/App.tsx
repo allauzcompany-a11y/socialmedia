@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
-import lauzLogo from './lauzlogo2.png';
+import lauzLogo from './lauzlogo.png';
 import { 
   Instagram, 
   Linkedin, 
@@ -178,37 +178,37 @@ export default function App() {
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03]" />
       </div>
 
-      <main className="relative z-10 mx-auto flex max-w-3xl flex-col items-center px-5 pb-12 pt-8 sm:px-6 sm:pt-10 md:pt-12">
+      <main className="relative z-10 mx-auto flex max-w-3xl flex-col items-center px-4 pb-10 pt-6 sm:px-6 sm:pb-12 sm:pt-10 md:pt-12">
         {/* Logo Section */}
         <motion.div 
           {...reveal(0.02, -16)}
-          className="mb-6 md:mb-8 flex w-full justify-center"
+          className="mb-5 flex w-full justify-center sm:mb-7 md:mb-8"
         >
-          <div className="relative w-full max-w-[600px]">
+          <div className="relative w-full max-w-[580px]">
             <motion.div
               aria-hidden
-              className="absolute left-1/2 top-1/2 h-[19rem] w-[19rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(220,38,38,0.42),rgba(127,29,29,0.03)_68%)] blur-2xl"
+              className="absolute left-1/2 top-1/2 h-[14.5rem] w-[14.5rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(220,38,38,0.42),rgba(127,29,29,0.03)_68%)] blur-2xl sm:h-[17rem] sm:w-[17rem] md:h-[19rem] md:w-[19rem]"
               animate={shouldReduceMotion ? { opacity: 0.66, scale: 1 } : { opacity: [0.55, 0.85, 0.55], scale: [1, 1.06, 1] }}
               transition={shouldReduceMotion ? { duration: 0 } : { duration: 4.8, repeat: Infinity, ease: 'easeInOut' }}
             />
 
-            <div className="relative flex items-center justify-center px-4 py-4 sm:px-6 sm:py-6 md:px-8 md:py-8">
+            <div className="relative flex items-center justify-center px-2 py-2 sm:px-6 sm:py-6 md:px-8 md:py-8">
               <motion.div
                 aria-hidden
-                className="absolute left-1/2 top-1/2 h-44 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-500/24 blur-3xl"
+                className="absolute left-1/2 top-1/2 h-[7.5rem] w-[13rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-500/24 blur-3xl sm:h-40 sm:w-64 md:h-44 md:w-72"
                 animate={shouldReduceMotion ? { opacity: 0.4 } : { opacity: [0.25, 0.5, 0.25] }}
                 transition={shouldReduceMotion ? { duration: 0 } : { duration: 3.8, repeat: Infinity, ease: 'easeInOut' }}
               />
               <motion.div
                 aria-hidden
-                className="absolute left-1/2 top-1/2 h-20 w-60 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-transparent via-white/24 to-transparent blur-lg"
+                className="absolute left-1/2 top-1/2 h-16 w-52 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-transparent via-white/24 to-transparent blur-lg sm:h-18 sm:w-56 md:h-20 md:w-60"
                 animate={shouldReduceMotion ? { x: 0, opacity: 0.25 } : { x: [-120, 120, -120], opacity: [0, 0.45, 0] }}
                 transition={shouldReduceMotion ? { duration: 0 } : { duration: 5.2, repeat: Infinity, ease: 'linear' }}
               />
               <img 
                 src={lauzLogo}
                 alt="LAUZ Logo" 
-                className="relative z-10 mx-auto h-48 w-auto scale-[1.35] object-contain drop-shadow-[0_20px_36px_rgba(239,68,68,0.45)] sm:h-56 sm:scale-[1.42] md:h-64 md:scale-[1.5]"
+                className="relative z-10 mx-auto h-32 w-auto scale-[1.05] object-contain drop-shadow-[0_20px_36px_rgba(239,68,68,0.45)] sm:h-52 sm:scale-[1.34] md:h-64 md:scale-[1.5]"
               />
             </div>
           </div>
@@ -217,17 +217,17 @@ export default function App() {
         {/* Header Text */}
         <motion.div 
           {...reveal(0.12)}
-          className="mb-8 text-center"
+          className="mb-7 text-center sm:mb-8"
         >
-          <h1 className="font-display mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-3xl font-extrabold tracking-tight text-transparent sm:text-4xl">
+          <h1 className="font-display mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-[1.75rem] font-extrabold leading-[1.08] tracking-tight text-transparent sm:text-4xl">
             Lauz Group Smart Automotive Service
           </h1>
-          <p className="mx-auto max-w-md text-sm text-gray-300/90 sm:text-base">
+          <p className="mx-auto max-w-md text-[13px] leading-relaxed text-gray-300/90 sm:text-base">
             Premium automotive services, diagnostics, and detailing with an engineered attention to quality.
           </p>
           <motion.div
             {...reveal(0.28, 10)}
-            className="mx-auto mt-4 inline-flex items-center gap-2 rounded-full border border-red-500/35 bg-white/5 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-red-200/90"
+            className="mx-auto mt-4 inline-flex items-center gap-2 rounded-full border border-red-500/35 bg-white/5 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-red-200/90 sm:px-4 sm:py-2 sm:text-[11px] sm:tracking-[0.14em]"
           >
             <Gauge className="h-4 w-4 text-red-300" />
             Performance Driven Care
@@ -236,7 +236,7 @@ export default function App() {
 
           <motion.div
             {...reveal(0.34, 10)}
-            className="mx-auto mt-4 flex w-full max-w-sm items-center justify-center gap-2 text-xs text-gray-400"
+            className="mx-auto mt-4 flex w-full max-w-sm flex-wrap items-center justify-center gap-2 text-[11px] text-gray-400 sm:text-xs"
           >
             <span className="inline-flex items-center gap-1 rounded-full border border-white/12 bg-white/[0.03] px-3 py-1.5">
               <Wrench className="h-3.5 w-3.5 text-red-300" />
@@ -256,11 +256,11 @@ export default function App() {
         {/* Links Section */}
         <motion.div
           {...reveal(0.42, 18)}
-          className="relative w-full overflow-hidden rounded-[1.75rem] border border-white/15 bg-black/35 p-3 sm:p-4 backdrop-blur-xl shadow-[0_18px_60px_rgba(0,0,0,0.45)]"
+          className="relative w-full overflow-hidden rounded-[1.5rem] border border-white/15 bg-black/35 p-2.5 shadow-[0_18px_60px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:rounded-[1.75rem] sm:p-4"
         >
           <span aria-hidden className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-red-500/70 via-white/45 to-blue-400/70" />
           <motion.p
-            className="mb-4 text-center text-[11px] font-semibold uppercase tracking-[0.22em] text-red-300/80"
+            className="mb-3 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-red-300/80 sm:mb-4 sm:text-[11px] sm:tracking-[0.22em]"
           >
             Official Channels
           </motion.p>
@@ -280,25 +280,27 @@ export default function App() {
                     animate: { opacity: 1, x: 0 },
                     transition: { delay: 0.52 + index * 0.08, duration: 0.48 }
                   })}
-              className={`focus-ring group relative flex items-center justify-between overflow-hidden rounded-2xl border ${link.borderColor} bg-[#101214]/85 px-4 py-4 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-white/30 hover:bg-[#171a1f] sm:px-5 sm:py-[18px] ${link.shadow}`}
+              className={`focus-ring group relative flex items-center justify-between overflow-hidden rounded-2xl border ${link.borderColor} bg-[#101214]/85 px-3.5 py-3.5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-white/30 hover:bg-[#171a1f] sm:px-5 sm:py-[18px] ${link.shadow}`}
             >
               <span aria-hidden className={`absolute left-0 top-0 h-full w-1 bg-gradient-to-b ${link.accent}`} />
                 <span aria-hidden className={`pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-r ${link.accent}`} />
 
-              <div className="flex items-center gap-4">
+              <div className="flex min-w-0 items-center gap-3.5 sm:gap-4">
                 <div className={`relative z-10 rounded-lg bg-white/10 p-2 transition-colors group-hover:bg-white/20 ${link.iconColor}`}>
                   {link.icon}
                 </div>
-                <div className="relative z-10">
-                  <span className="block text-lg font-semibold leading-5">{link.name}</span>
-                  <span className="text-xs font-medium text-gray-400">{link.handle}</span>
+                <div className="relative z-10 min-w-0">
+                  <span className="block text-base font-semibold leading-5 sm:text-lg">{link.name}</span>
+                  <span className="block max-w-[46vw] truncate text-[11px] font-medium leading-4 text-gray-400 sm:max-w-none sm:text-xs">
+                    {link.handle}
+                  </span>
                 </div>
               </div>
               <div className="relative z-10 flex items-center gap-2">
-                <span className="text-xs font-semibold uppercase tracking-[0.12em] text-gray-400 transition-colors group-hover:text-white/90">
+                <span className="hidden text-xs font-semibold uppercase tracking-[0.12em] text-gray-400 transition-colors group-hover:text-white/90 sm:block">
                   {link.actionLabel}
                 </span>
-                <ChevronRight className="h-5 w-5 translate-x-[-10px] transform opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" />
+                <ChevronRight className="h-5 w-5 opacity-70 transition-all sm:translate-x-[-10px] sm:opacity-0 sm:group-hover:translate-x-0 sm:group-hover:opacity-100" />
               </div>
             </motion.a>
           ))}
@@ -308,12 +310,12 @@ export default function App() {
         {/* Footer */}
         <motion.footer 
           {...reveal(0.72, 14)}
-          className="mt-14 text-center"
+          className="mt-10 text-center sm:mt-14"
         >
-          <div className="mb-4 flex items-center justify-center gap-2 text-xs uppercase tracking-[0.2em] text-gray-500">
-            <div className="h-[1px] w-8 bg-gray-800" />
-            <span>Lauz Group Smart Automotive Service</span>
-            <div className="h-[1px] w-8 bg-gray-800" />
+          <div className="mb-4 flex items-center justify-center gap-2 text-[10px] uppercase tracking-[0.14em] text-gray-500 sm:text-xs sm:tracking-[0.2em]">
+            <div className="hidden h-[1px] w-8 bg-gray-800 sm:block" />
+            <span className="text-center">Lauz Group Smart Automotive Service</span>
+            <div className="hidden h-[1px] w-8 bg-gray-800 sm:block" />
           </div>
           <p className="text-[10px] text-gray-600">
             &copy; {new Date().getFullYear()} LAUZ Company. All rights reserved.
